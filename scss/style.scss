@@ -1,0 +1,172 @@
+@import "reset";
+@import "global";
+@import "fonts";
+@import "vars";
+
+// -------------------------------------- НАЧАЛО ----------------------------------------------------
+
+.header,
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 332px;
+    cursor: pointer;
+    &:hover {
+        .card__info {
+            z-index: 10;
+            position: absolute;
+            top: auto;
+            left: 0;
+            &::before {
+                content: "";
+                z-index: -1;
+                position: absolute;
+                display: block;
+                left: -4%;
+                background-color: #fff;
+                width: 108%;
+                height: 100%;
+            }
+        }
+        .card__info-hover {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__image {
+        width: 332px;
+        height: 444px;
+        position: relative;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 13px 0;
+        background: #fff;
+        transition: 0.3s;
+    }
+    &__info-pay {
+        display: block;
+        padding: 12px 24px;
+        color: #fff;
+        background: $main-dark;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    &__info-block {
+        height: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .mobile {
+            display: none;
+        }
+    }
+    &__info-name {
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 19px;
+        line-height: 126%;
+        color: $main-dark;
+        letter-spacing: 0.04em;
+        margin-right: 10px;
+        & p {
+            margin: 0; 
+            -webkit-line-clamp: 2; 
+            display: -webkit-box; 
+            -webkit-box-orient: vertical; 
+            overflow: hidden;
+        }
+    }
+
+    &__info-hover {
+        display: none;
+        margin-top: 13px;
+    }
+
+    .card__price {
+        &-new {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            color: $main-pink;
+        }
+        &-old {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 200%;
+            color: $main-dark;
+            opacity: 0.7;
+            margin-right: 6px;
+        }
+    }
+
+    .size {
+        &__block-list {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__block-title {
+            font-size: 14px;
+            line-height: 114%;
+            letter-spacing: 0.04em;
+            color: $main-dark;
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+        &__block-item {
+            font-size: 14px;
+            line-height: 143%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.04em;
+            color: $main-dark;
+        }
+    }
+
+    .image__container {
+        &-discount {
+            color: $main-pink;
+            padding: 4px;
+            position: absolute;
+            font-weight: 600;
+            font-size: 12px;
+            left: 8px;
+            top: 8px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        &-btn__like {
+            position: absolute;
+            background: transparent;
+            border: 0;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.store {
+    display: flex;
+    justify-content: center;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@import "media";

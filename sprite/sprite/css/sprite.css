@@ -1,0 +1,22 @@
+.svg-like {
+	background: url("svg/sprite.css-6ec601ae.svg") 0 0 no-repeat;
+}
+
+.svg-like:hover{
+	background: url("svg/sprite.css-6ec601ae.svg") 100% 0 no-repeat;
+}
+
+.svg-like-dims {
+	width: 26px;
+	height: 22px;
+}
+
+.svg-like-active {
+	background: url("svg/sprite.css-6ec601ae.svg") 100% 0 no-repeat;
+}
+
+.svg-like-active-dims {
+	width: 26px;
+	height: 22px;
+}
+

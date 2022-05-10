@@ -1,0 +1,25 @@
+@media (max-width: 820px) {
+    .card:hover {
+        .card__info {
+            position: static;
+        }
+        .card__info-hover {
+            display: none;
+        }
+    }
+    .card__info-block {
+        .mobile {
+            display: block;
+        }
+        height: 120px;
+    }
+    .store__container {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 693px) {
+    .store__container {
+        justify-content: center;
+    }
+}
